@@ -1,14 +1,41 @@
+import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function App() {
+
+  const [goal, setGoal] = useState(null)
+  const [goals, setGoals] = useState([])
+
+  const handleGoalInputChange = (text) => {
+    setGoal(`${text}`)
+  }
+
+  const handleGoalInputSubmit = () => {
+    if (!goal) {
+      return
+    }
+    setGoals([goal, ...goals])
+    setGoal(null)
+  }
+
   return (
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.textInput} placeholder='Add your goal!' />
-        <Button style={styles.addGoalButton} title="Add Goal" />
+        <TextInput style={styles.textInput}
+          placeholder='Add your goal!'
+          onChangeText={handleGoalInputChange}
+        />
+        <Button
+          style={styles.addGoalButton}
+          title="Add Goal"
+          onPress={handleGoalInputSubmit}
+        />
       </View>
       <View style={styles.goalsListContainer}>
         <Text>Goals List</Text>
+        {goals.map(item => (
+          <Text>{item}</Text>
+        ))}
       </View>
     </View>
   );
