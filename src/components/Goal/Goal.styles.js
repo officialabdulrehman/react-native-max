@@ -9,5 +9,8 @@ export const goalStyles = StyleSheet.create({
   },
   goalText: {
     padding: 10,
+  },
+  pressed: {
+    backgroundColor: "rgba(83, 196, 247, 0.4)",
   }
 })

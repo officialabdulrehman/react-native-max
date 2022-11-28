@@ -10,6 +10,7 @@ export const Goal = ({ item, handleDeletion }) => {
           color: "rgba(83, 196, 247, 0.4)",
           borderless: true,
         }}
+        style={({ pressed }) => pressed ? goalStyles.pressed : null}
       >
         <Text style={goalStyles.goalText}>{item.value}</Text>
       </Pressable>
