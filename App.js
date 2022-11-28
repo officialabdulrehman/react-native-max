@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 import { appStyles } from './App.styles';
 import { GoalInput } from './src/components/GoalInput/GoalInput';
 import { GoalList } from './src/components/GoalList/GoalList';
@@ -7,6 +7,7 @@ import { GoalList } from './src/components/GoalList/GoalList';
 export default function App() {
 
   const [goals, setGoals] = useState([])
+  const [modal, setModal] = useState(false)
 
   const handleAddition = (goal) => {
     setGoals(currGoals => [goal, ...currGoals])
@@ -16,12 +17,27 @@ export default function App() {
     setGoals(currGoals => currGoals.filter(goal => goal.id !== goalToBeDeleted.id))
   }
 
+  const showModal = () => {
+    setModal(true)
+  }
+
+  const hideModal = () => {
+    setModal(false)
+  }
+
   return (
     <View style={appStyles.appContainer}>
-      <GoalInput
-        handleAddition={handleAddition}
-      />
+      <Text style={appStyles.appTitle}>My Goals!</Text>
       <GoalList goals={goals} handleDeletion={handleDeletion} />
+      <Button
+        title='Add Goal'
+        onPress={showModal}
+      />
+      {modal ? <GoalInput
+        visible={modal}
+        hideModal={hideModal}
+        handleAddition={handleAddition}
+      /> : null}
     </View>
   );
 }

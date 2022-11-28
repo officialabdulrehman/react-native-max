@@ -10,6 +10,8 @@ export const GoalList = ({ goals, handleDeletion }) => {
         renderItem={({ item, index, separators }) => <Goal item={item} handleDeletion={handleDeletion} />}
         keyExtractor={(item, index) => { item.id + item.value }}
         alwaysBounceVertical={true}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   )

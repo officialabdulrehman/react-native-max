@@ -2,10 +2,11 @@ import { StyleSheet } from "react-native";
 
 export const goalInputStyles = StyleSheet.create({
   inputContainer: {
+    backgroundColor: "#eee",
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center"
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
   textInput: {
     color: '#ccc',
@@ -15,5 +16,17 @@ export const goalInputStyles = StyleSheet.create({
     paddingVertical: 4,
     borderTopLeftRadius: 10,
     borderBottomLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
   },
+  buttonsContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: "60%",
+    marginTop: 30
+  },
+  button: {
+    width: "40%",
+  }
 });
