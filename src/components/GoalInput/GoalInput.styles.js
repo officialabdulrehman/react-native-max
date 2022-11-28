@@ -8,6 +8,11 @@ export const goalInputStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  image: {
+    width: 100,
+    height: 130,
+    marginBottom: -10
+  },
   textInput: {
     color: '#ccc',
     backgroundColor: "#fff",

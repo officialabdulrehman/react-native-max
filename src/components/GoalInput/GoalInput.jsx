@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Button, Modal, TextInput, View } from "react-native"
+import { Button, Image, Modal, TextInput, View } from "react-native"
 import { goalInputStyles } from "./GoalInput.styles"
 
 export const GoalInput = ({ visible, hideModal, handleAddition }) => {
@@ -30,6 +30,10 @@ export const GoalInput = ({ visible, hideModal, handleAddition }) => {
     // transparent
     >
       <View style={goalInputStyles.inputContainer}>
+        <Image
+          source={require("../../../assets/anime.png")}
+          style={goalInputStyles.image}
+        />
         <TextInput style={goalInputStyles.textInput}
           placeholder='Add your goal!'
           onChangeText={handleGoalInputChange}
