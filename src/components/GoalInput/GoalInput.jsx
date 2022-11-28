@@ -42,11 +42,16 @@ export const GoalInput = ({ visible, hideModal, handleAddition }) => {
         />
         <View style={goalInputStyles.buttonsContainer}>
           <View style={goalInputStyles.button}>
-            <Button title="Cancel" onPress={hideModal} />
+            <Button
+              color="#FF7043"
+              title="Cancel"
+              onPress={hideModal}
+            />
           </View>
           <View style={goalInputStyles.button}>
             <Button
               style={goalInputStyles.addGoalButton}
+              color="rgba(83, 196, 247, 1)"
               title="Add Goal"
               onPress={handleGoalInputSubmit}
             />

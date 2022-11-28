@@ -30,6 +30,7 @@ export default function App() {
       <Text style={appStyles.appTitle}>My Goals!</Text>
       <GoalList goals={goals} handleDeletion={handleDeletion} />
       <Button
+        color="rgba(83, 196, 247, 1)"
         title='Add Goal'
         onPress={showModal}
       />
