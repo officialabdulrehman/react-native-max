@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Button, TextInput, View } from "react-native"
 import { goalInputStyles } from "./GoalInput.styles"
 
-export const GoalInput = ({ handleSubmission }) => {
+export const GoalInput = ({ handleAddition }) => {
 
   const [goal, setGoal] = useState(null)
 
@@ -18,7 +18,7 @@ export const GoalInput = ({ handleSubmission }) => {
       id: Math.random().toString(),
       value: goal
     }
-    handleSubmission(newGoal)
+    handleAddition(newGoal)
     setGoal(null)
   }
 

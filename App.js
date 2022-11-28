@@ -8,16 +8,20 @@ export default function App() {
 
   const [goals, setGoals] = useState([])
 
-  const handleSubmission = (goal) => {
+  const handleAddition = (goal) => {
     setGoals(currGoals => [goal, ...currGoals])
+  }
+
+  const handleDeletion = (goalToBeDeleted) => {
+    setGoals(currGoals => currGoals.filter(goal => goal.id !== goalToBeDeleted.id))
   }
 
   return (
     <View style={appStyles.appContainer}>
       <GoalInput
-        handleSubmission={handleSubmission}
+        handleAddition={handleAddition}
       />
-      <GoalList goals={goals} />
+      <GoalList goals={goals} handleDeletion={handleDeletion} />
     </View>
   );
 }
