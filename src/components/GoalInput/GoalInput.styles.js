@@ -10,7 +10,7 @@ export const goalInputStyles = StyleSheet.create({
   textInput: {
     color: '#ccc',
     backgroundColor: "#fff",
-    width: "80%",
+    width: "71%",
     paddingHorizontal: 15,
     paddingVertical: 4,
     borderTopLeftRadius: 10,
