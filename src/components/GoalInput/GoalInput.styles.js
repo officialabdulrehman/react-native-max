@@ -14,7 +14,7 @@ export const goalInputStyles = StyleSheet.create({
     marginBottom: -10
   },
   textInput: {
-    color: '#ccc',
+    color: '#555',
     backgroundColor: "#fff",
     width: "71%",
     paddingHorizontal: 15,

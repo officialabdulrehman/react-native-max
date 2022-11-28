@@ -34,7 +34,8 @@ export const GoalInput = ({ visible, hideModal, handleAddition }) => {
           source={require("../../../assets/anime.png")}
           style={goalInputStyles.image}
         />
-        <TextInput style={goalInputStyles.textInput}
+        <TextInput
+          style={goalInputStyles.textInput}
           placeholder='Add your goal!'
           onChangeText={handleGoalInputChange}
           value={goal}
